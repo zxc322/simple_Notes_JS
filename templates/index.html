@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="./styles/app.css">
+    <link rel="stylesheet" href="./styles/form.css">
+    <link rel="stylesheet" href="./styles/nav.css">
+</head>
+<body>
+    <div class="header">
+        
+        <div class="header-content">
+            <span class="header-title">My notes app</span>
+            <div class="header-nav">
+                <span id="active-notes-btn" class="nav-btn chosen-page">Notes</span>
+                <span id="archieve-notes-btn" class="nav-btn">Archive</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="active-notes-section z-class1">
+            <div class="notes-header">
+                <span>Name</span>
+                <span>Created</span>
+                <span>Category</span>
+                <span>Content</span>
+                <span>Dates</span>
+            </div>
+
+            <div class="active-notes">
+
+            </div>
+
+        
+            <div class="add-note">Create note</div>
+
+            <div class="create-note-window hidden">
+                <form class="create-note-form" name="createNote">
+                    <h4>Create note</h4>
+                    <input class="form1-group" type="text" name="name" placeholder="Note name" required>
+
+                    <select class="form1-group" name="category">
+                        <option value="Task">Task</option>
+                        <option value="Idea">Idea</option>
+                        <option value="Quote">Quote</option>
+                        <option value="Random thought">Random thought</option>
+                    </select>
+
+                    <textarea class="textarea" placeholder="Content" name="content"></textarea>
+                    <input class="form1-group" type="date" name="date">
+
+                    <div class="btns-wrapper">
+                        <div class="submit-button">Submit</div>
+                        <div class="cancel-button">Cancel</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="archieved-notes-section z-class0">
+            <div class="notes-header">
+                <span>Name</span>
+                <span>Created</span>
+                <span>Category</span>
+                <span>Content</span>
+                <span>Dates</span>
+            </div>
+
+            <div class="archieved-notes">
+
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+    <script type="module" src="./utils/createNote.js"></script>
+    <script type="module" src="./utils/notesOptions.js"></script>
+    <script type="module" src="./utils/deleteNote.js"></script>
+    <script type="module" src="./utils/swipe.js"></script>
+    <script type="module" src="./utils/archieveNote.js"></script>
+
+</body>
+</html>

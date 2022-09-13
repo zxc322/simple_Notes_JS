@@ -1,0 +1,122 @@
+.header{
+    height: 60px;
+    background-color: #e4e4e4;
+    position: relative;
+    margin-bottom: 50px; 
+}
+
+.header-content{
+    text-align: center;
+    line-height: 60px;
+}
+
+.header-title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.header-nav{
+    position: absolute;
+    right: 180px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-btn{
+    display: inline-block;
+    height: 25px;
+    width: 80px;
+    line-height: 25px;
+    border: 2px solid black;
+    border-radius: 2px;
+    text-align: center;
+    margin: 0 10px;
+    transition: .1s ease;
+    cursor: default;
+}
+
+.nav-btn:hover{
+    scale: 1.1;
+}
+
+.chosen-page{
+    background-color: #ffbd43
+}
+
+.notes-header{
+    color: rgb(0, 0, 0);
+    background-color: rgb(224, 224, 224);
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    border-radius: 5px;
+    align-items: center;
+      
+}
+
+.content-wrapper{
+    /* padding: 50px 250px; */
+
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+
+.active-notes-section{
+
+    width: 850px;
+
+}
+
+.archieved-notes-section{
+    width: 850px;
+
+}
+
+.z-class1{
+
+    z-index: 1;
+}
+
+.z-class0{
+    z-index: 0;
+    display: none;
+}
+
+.swipe-out{
+    animation-name: swipe-out;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.swipe-in{
+    animation-name: swipe-in;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes swipe-out{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(500px);
+        opacity: 0;
+        display: flex;
+    }
+}
+
+@keyframes swipe-in{
+    0%{
+        transform: translateX(-500px);
+        opacity: 0;
+        display: block;
+    }
+    100%{
+        transform: translateX(0);
+    }
+
+}
