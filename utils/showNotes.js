@@ -44,11 +44,8 @@ export function insertNoteInHTML(key, notes, parrentContainer, options){
     let dates = notes[key][3]
 
     let row = document.createElement('div')
-    let rowMenu = document.createElement('div')
-    //rowMenu.setAttribute('class', 'appended-span')
-    
-
     row.setAttribute('class', 'separate-note')
+
     row.innerHTML = ''
     row.innerHTML += `<span class="note-item name">${name}</span>`
     row.innerHTML += `<span class="note-item">${created}</span>`
@@ -58,7 +55,7 @@ export function insertNoteInHTML(key, notes, parrentContainer, options){
     
     if (dates.length > 0){
             
-        row.innerHTML += `<span class="note-item">${dates.slice(-2)}</span>`
+        row.innerHTML += `<span class="note-item">${dates.slice(-2)} </span>`
     } else{
         row.innerHTML += `<span class="note-item">--</span>`
     }

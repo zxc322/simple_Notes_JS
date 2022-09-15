@@ -1,5 +1,5 @@
 import { activeNotesMap, archieveNotesMap } from "../app.js ";
-import { insertNoteInHTML, addArchieveNoteOptions, addActiveNoteOptions } from "./showNotes.js";
+import { insertNoteInHTML, addArchieveNoteOptions, addActiveNoteOptions } from "../utils/showNotes.js";
 
 
 const notesItems = document.querySelector('.content-wrapper')

@@ -1,6 +1,6 @@
-import { validateName, validateContent } from "./validateForm.js"
-import { insertNoteInHTML, addActiveNoteOptions } from "./showNotes.js"
-import { activeNotesMap } from "../app.js"
+import { validateName, validateContent } from "../utils/validateForm.js"
+import { insertNoteInHTML, addActiveNoteOptions } from "../utils/showNotes.js"
+import { activeNotesMap, archieveNotesMap } from "../app.js"
 
 
 
@@ -34,7 +34,8 @@ createNoteBtn.addEventListener('click', (e) => {
     planingDate.push(document.forms["createNote"]["date"].value)
     let now = new Date().toDateString()
     let notes = Object.fromEntries(activeNotesMap)
-    if (validateName(name, notes) === true && validateContent(content) ===true){ 
+    let archieve = Object.fromEntries(archieveNotesMap)
+    if (validateName(name, notes, archieve) === true && validateContent(content) ===true){ 
         
         activeNotesMap.set(name, [now, category, content, planingDate])
         notes = Object.fromEntries(activeNotesMap)
